@@ -1,0 +1,20 @@
+{
+  "name": "csmassignment4",
+  "private": true,
+  "homepage": "https://stvnwastaken.github.io/csmassignment4/",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cross-env TAILWIND_MODE=watch vite",
+    "build": "cross-env TAILWIND_MODE=build vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "prettier": "^3.2.4"
+  }
+}

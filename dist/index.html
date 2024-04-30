@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 4 PWA</title>
+    <link rel="manifest" href="/csmassignment4/assets/manifest-Jy7gOH49.json">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="container">
+    <h1>Progressive Web Applications (PWAs)</h1>
+    <p>Progressive Web Applications (PWAs) are web applications that load like regular web pages or websites but can
+        offer the user functionality such as working offline, push notifications, and device hardware access
+        traditionally available only to native applications. PWAs are:</p>
+    <ul>
+        <li>Progressive: They work on any browser, but provide the best experience on modern browsers.</li>
+        <li>Responsive: They fit any screen size, providing a seamless experience on desktop or mobile devices.</li>
+        <li>Connectivity independent: They can work offline or on low-quality networks, making them ideal for unstable
+            network connections.</li>
+        <li>App-like: They feel like native apps, providing immersive, full-screen experiences.</li>
+        <li>Linkable: They can be shared via URL and do not require complex installation.</li>
+        <li>Discoverable: They are identifiable as "applications" thanks to W3C manifests and service workers
+            registration, allowing search engines to find them.</li>
+        <li>Safe: They are served via HTTPS to ensure content integrity, providing security with encryption.</li>
+        <li>Re-engageable: They make re-engagement easy through features like push notifications.</li>
+        <li>Installable: Users can "keep" apps they find most useful on their home screen without the need for an app
+            store.</li>
+        <li>Linkable: They allow users to share apps via URL, and do not require complex installation.</li>
+    </ul>
+    <label for="background-select">Select background color:</label>
+    <select id="background-select">
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgold">Light Gold</option>
+    </select>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
